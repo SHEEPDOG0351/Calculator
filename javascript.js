@@ -2,11 +2,11 @@ let first_operation = []
 let final_operation = []
 
 
-let input_box = document.getElementsByTagName("input_box");
-
-function output(char){
-
-    input_box.value += char;
+let input_box = document.querySelector('#output_box input');
+function output(char) {
+    if (typeof char === 'number') {
+        input_box.value += char
+    }
 }
 
 function calculation(char){
