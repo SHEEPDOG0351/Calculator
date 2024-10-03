@@ -13,6 +13,17 @@ function calculation(char){
             else if(typeofchar === "number"){
                 first_operation.push(char)
             }
+            else if(char === "exponent"){
+                bsse = first_operation
+                result = base ** 2
+            }
+            else if(char === "sqrt"){
+                number = first_operation[0];
+                result = Math.sqrt(number);
+            }
+            else{
+                return final_operation}
+            
         }
     }
     else if(first_operation.length == 2){
@@ -34,5 +45,5 @@ function calculation(char){
         
         final_operation.push(calculation)
     }
-    return final_operation
+
 }
