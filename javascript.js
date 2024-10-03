@@ -2,7 +2,15 @@ let first_operation = []
 let final_operation = []
 
 
+let input_box = document.getElementsByTagName("input_box");
+
+function output(char){
+
+    input_box.value += char;
+}
+
 function calculation(char){
+    output(char)
     let calculation = 0
     let operation = ""
     if(first_operation.length <= 3){
@@ -94,4 +102,5 @@ function calculation(char) {
 
         final_operation.push(calculation)
     }
+}
 }
