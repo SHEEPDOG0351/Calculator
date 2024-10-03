@@ -20,7 +20,14 @@
     }
 
     #output_box {
-        font-size: 50px;
+        text-align: right;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        text-align: right;
+        font-size: 23px;
     }
 
     .button_layout{
@@ -74,14 +81,16 @@
 
 <body>
 <div id="output_body">
-    <p id="output_box">Test</p>
+    <p id="output_box">
+        <input type="text" placeholder="0">
+    </p>
 </div>
 
 <div class="button_layout">
     <div class="button_container"><button onclick="calculation('%')">%</button></div>
-    <div class="button_container"><button onclick="calculation('CE')">CE</button></div>
+    <div class="button_container"><button onclick="calcuation('CE')">CE</button></div>
     <div class="button_container"><button onclick="calculation('C')">C</button></div>
-    <div class="button_container"><button onclick="calculation('Delete')">Delete</button></div>
+    <div class="button_container"><button onclick="calcuation('Delete')">Delete</button></div>
     <div class="button_container"><button onclick=""></button> </div>
     <div class="button_container"><button onclick="calculation('exponent')">x<sup>2</sup></button></div>
     <div class="button_container"><button onclick="calculation('sqrt')"><math><msqrt><mi>x</mi></msqrt></math></button></div>
@@ -94,14 +103,14 @@
     <div class="button_container"><button onclick="calculation(5)">5</button></div>
     <div class="button_container"><button onclick="calculation(6)">6</button></div>
     <div class="button_container"><button onclick="calculation('-')">-</button></div>
-    <div class="button_container"><button onclick="calculation(1)">1</button></div>
+    <div class="button_container"><button onclick="calcuation(1)">1</button></div>
     <div class="button_container"><button onclick="calculation(2)">2</button></div>
     <div class="button_container"><button onclick="calculation(3)">3</button></div>
     <div class="button_container"><button onclick="calculation('+')">+</button></div>
-    <div class="button_container"><button onclick="calculation('neagtive')">+/-</button></div>
+    <div class="button_container"><button onclick="calculation('+/-')">+/-</button></div>
     <div class="button_container"><button onclick="calculation(0)">0</button></div>
     <div class="button_container"><button onclick="calculation('.')">.</button></div>
-    <div class="button_container"><button onclick="calculation('=')">Enter</button></div>
+    <div class="button_container"><button onclick="calcuation('=')">=</button></div>
 </div>
 
 
