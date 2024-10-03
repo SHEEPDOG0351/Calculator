@@ -12,10 +12,34 @@
         margin: 0;
         padding: 0;
     }
+
+    #output_body{
+        width: 298px;
+        border: 1px black solid;
+        text-align: right;
+    }
+
+    #output_box {
+        font-size: 50px;
+    }
+
     .button_layout{
         display: grid;
         grid-template-columns: repeat(4 , 1fr);
         width: fit-content;
+
+        /* margin: 0 auto; */
+    }
+
+    .button_container {
+        width: fit-content;
+        
+    }
+
+    button {
+        width: fit-content;
+        padding: 40px;
+
         margin: 0 auto;
     }
     .button_container button{
@@ -25,6 +49,7 @@
     }
     #numpad_container {
         display: grid;
+
     }
 
     .operations-buttons {
@@ -49,9 +74,7 @@
 
 <body>
 <div id="output_body">
-    <p id="output_box"></p>
-
-
+    <p id="output_box">Test</p>
 </div>
 
 <div class="button_layout">
