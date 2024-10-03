@@ -61,20 +61,14 @@
 
     .operations-buttons {
         background-color: #222222;
-        width: fit-content;
-        height: auto;
     }
 
     .num_buttons {
         background-color: #4e4e4e;
-        width: fit-content;
-        height: auto;
     }
 
     #equal_button {
         background-color: #00ccff;
-        width: fit-content;
-        height: auto;
     }
 
 </style>
@@ -110,7 +104,7 @@
     <div class="button_container"><button onclick="calculation('+/-')">+/-</button></div>
     <div class="button_container"><button onclick="calculation(0)">0</button></div>
     <div class="button_container"><button onclick="calculation('.')">.</button></div>
-    <div class="button_container"><button onclick="calculation('=')">=</button></div>
+    <div class="button_container"><button id="equal_button" onclick="calculation('=')">=</button></div>
 </div>
 
 
