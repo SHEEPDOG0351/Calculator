@@ -15,12 +15,12 @@
     .button_layout{
         display: grid;
         grid-template-columns: repeat(4 , 1fr);
-        grid-gap: 10px;
-        padding: 20px;
-        max-width: 1200px;
+        width: fit-content;
         margin: 0 auto;
     }
-
+    .button_container button{
+        padding: 10px;
+    }
     #numpad_container {
         display: grid;
     }
@@ -53,62 +53,33 @@
 </div>
 
 <div class="button_layout">
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
-    <div class="button_container"><button onclick=""></button></div>
+    <div class="button_container"><button onclick="">%</button></div>
+    <div class="button_container"><button onclick="">CE</button></div>
+    <div class="button_container"><button onclick="">C</button></div>
+    <div class="button_container"><button onclick="">Delete</button></div>
+    <div class="button_container"><button onclick=""></button> </div>
+    <div class="button_container"><button onclick="">x<sup>2</sup></button></div>
+    <div class="button_container"><button onclick=""><math><msqrt><mi>x</mi></msqrt></math></button></div>
+    <div class="button_container"><button onclick="">/</button></div>
+    <div class="button_container"><button onclick="">7</button></div>
+    <div class="button_container"><button onclick="">8</button></div>
+    <div class="button_container"><button onclick="">9</button></div>
+    <div class="button_container"><button onclick="">*</button></div>
+    <div class="button_container"><button onclick="">4</button></div>
+    <div class="button_container"><button onclick="">5</button></div>
+    <div class="button_container"><button onclick="">6</button></div>
+    <div class="button_container"><button onclick="">-</button></div>
+    <div class="button_container"><button onclick="">1</button></div>
+    <div class="button_container"><button onclick="">2</button></div>
+    <div class="button_container"><button onclick="">3</button></div>
+    <div class="button_container"><button onclick="">+</button></div>
+    <div class="button_container"><button onclick="">+/-</button></div>
+    <div class="button_container"><button onclick="">0</button></div>
+    <div class="button_container"><button onclick="">.</button></div>
+    <div class="button_container"><button onclick="">Enter</button></div>
 </div>
 
-    <div id="output_body">
-        <p id="output_box"></p>
-    </div>
 
-    <div class="button_layout">
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-        <div class="button_container"><button onclick=""></button></div>
-    </div>
 
 
     <script src="javascript.js"></script>
