@@ -59,7 +59,7 @@ let final_operation = [] //Stores the whole operation and should hold the curren
 
 let input_box = document.querySelector('#output_box input');
 function output(char) {
-    if (typeof char === 'number') {
+    if (typeof char === 'number' || typeof char === 'string') {
         input_box.value += char
     }
 }
