@@ -3,7 +3,7 @@ let final_operation = [] //Stores the whole operation and should hold the curren
 
 let input_box = document.querySelector('#output_box input');
 function output(char) {
-    if (typeof char === 'number' || typeof char === 'string') {
+    if ((typeof char === 'number' || typeof char === 'string') && char !== '=' && char !== 'CE' && char !== 'C' && char !== 'Delete') {
         input_box.value += char
     }
 }
@@ -29,7 +29,13 @@ function calculation(char) {
                 // Checks for the sqrt button, then performs the square root operation on the number
                 number = first_operation[0]
                 result = Math.sqrt(number)
-            } 
+            } else if (char == 'CE'){
+
+            } else if (char == 'C'){
+
+            } else if (char == 'Delete'){
+                
+            }
             else {
                 // Should work as the condition for checking for the equals operation
                 return final_operation
