@@ -13,6 +13,10 @@
         padding: 0;
     }
 
+    body {
+        color: white;
+    }
+
     #output_body{
         width: 298px;
         border: 1px black solid;
@@ -40,14 +44,16 @@
 
     .button_container {
         width: fit-content;
+        color: white;
         
     }
 
     button {
         width: fit-content;
         padding: 40px;
-
+        color: white;
         margin: 0 auto;
+        font-size: 18px;
     }
     .button_container button{
         padding: 10px;
@@ -60,10 +66,18 @@
     }
 
     .operations-buttons {
-        background-color: #222222;
+        background-color: #393939;
     }
 
     .num_buttons {
+        background-color: #4e4e4e;
+    }
+
+    .num_buttons:hover {
+        background-color: #393939;
+    }
+
+    .operations-buttons:hover {
         background-color: #4e4e4e;
     }
 
@@ -81,29 +95,29 @@
 </div>
 
 <div class="button_layout">
-    <div class="button_container"><button onclick="calculation('%')">%</button></div>
-    <div class="button_container"><button onclick="calculation('CE')">CE</button></div>
-    <div class="button_container"><button onclick="calculation('C')">C</button></div>
-    <div class="button_container"><button onclick="calculation('Delete')">Delete</button></div>
-    <div class="button_container"><button onclick=""></button> </div>
-    <div class="button_container"><button onclick="calculation('exponent')">x<sup>2</sup></button></div>
-    <div class="button_container"><button onclick="calculation('sqrt')"><math><msqrt><mi>x</mi></msqrt></math></button></div>
-    <div class="button_container"><button onclick="calculation('/')">/</button></div>
-    <div class="button_container"><button onclick="calculation(7)">7</button></div>
-    <div class="button_container"><button onclick="calculation(8)">8</button></div>
-    <div class="button_container"><button onclick="calculation(9)">9</button></div>
-    <div class="button_container"><button onclick="calculation('*')">*</button></div>
-    <div class="button_container"><button onclick="calculation(4)">4</button></div>
-    <div class="button_container"><button onclick="calculation(5)">5</button></div>
-    <div class="button_container"><button onclick="calculation(6)">6</button></div>
-    <div class="button_container"><button onclick="calculation('-')">-</button></div>
-    <div class="button_container"><button onclick="calculation(1)">1</button></div>
-    <div class="button_container"><button onclick="calculation(2)">2</button></div>
-    <div class="button_container"><button onclick="calculation(3)">3</button></div>
-    <div class="button_container"><button onclick="calculation('+')">+</button></div>
-    <div class="button_container"><button onclick="calculation('+/-')">+/-</button></div>
-    <div class="button_container"><button onclick="calculation(0)">0</button></div>
-    <div class="button_container"><button onclick="calculation('.')">.</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('%')">%</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('CE')">CE</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('C')">C</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('Delete')">Delete</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick=""></button> </div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('exponent')">x<sup>2</sup></button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('sqrt')"><math><msqrt><mi>x</mi></msqrt></math></button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('/')">/</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(7)">7</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(8)">8</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(9)">9</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('*')">*</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(4)">4</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(5)">5</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(6)">6</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('-')">-</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(1)">1</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(2)">2</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(3)">3</button></div>
+    <div class="button_container"><button class="operations-buttons" onclick="calculation('+')">+</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation('+/-')">+/-</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation(0)">0</button></div>
+    <div class="button_container"><button class="num_buttons" onclick="calculation('.')">.</button></div>
     <div class="button_container"><button id="equal_button" onclick="calculation('=')">=</button></div>
 </div>
 
