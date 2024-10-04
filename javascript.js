@@ -13,9 +13,12 @@ function output(char) {
 
 function calculation(char) {
     output(char)
-    if (!isNaN(Number(char))) {
-        current_number += char;}
-    else if (['+', '-', '/', '*', '%'].includes(char)) {
+    if (!isNaN(Number(char)) || char === '.') {
+        if (char === '.' && current_number.includes('.')) {
+            return; 
+        }
+        current_number += char; 
+    } else if (['+', '-', '/', '*', '%'].includes(char)) {
         if (current_number !== '') {
             first_operation.push(Number(current_number));
             current_number = '';
