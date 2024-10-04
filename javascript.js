@@ -25,35 +25,19 @@ function calculation(char) {
         // Checks for operators and makes sure its not one of the other equals / enter / delete etc buttons.
         operation = char
     }  else if (char == 'exponent') {
-        if (current_number !== '') {
-            let number = Number(current_number);
-            let result = number ** 2;
-            input_box.value = result;
-            first_operation = [result];
-            last_result = result;
-            current_number = ''; 
-        } else if (first_operation.length > 0) {
-            let number = first_operation[0];
-            let result = number ** 2;
-            input_box.value = result;
-            first_operation = [result];
-            last_result = result; 
-        }
+        let number = current_number !== '' ? Number(current_number) : (first_operation[0] || last_result);
+        let result = number ** 2;
+        input_box.value = result;
+        last_result = result;
+        current_number = '';
+        first_operation = [];
     } else if (char == 'sqrt') {
-        if (current_number !== '') {
-            let number = Number(current_number);
-            let result = Math.sqrt(number);
-            input_box.value = result;
-            first_operation = [result];  
-            last_result = result; 
-            current_number = '';  
-        } else if (first_operation.length > 0) {
-            let number = first_operation[0];
-            let result = Math.sqrt(number);
-            input_box.value = result;
-            first_operation = [result]; 
-            last_result = result; 
-        }
+        let number = current_number !== '' ? Number(current_number) : (first_operation[0] || last_result);
+        let result = Math.sqrt(number);
+        input_box.value = result;
+        last_result = result;
+        current_number = '';
+        first_operation = [];
     } else if (char == 'CE') {
         first_operation = [];
         current_number = ''
