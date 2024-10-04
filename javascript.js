@@ -21,18 +21,36 @@ function calculation(char) {
         }
         // Checks for operators and makes sure its not one of the other equals / enter / delete etc buttons.
         operation = char
-    } else if (char == 'exponent') {
-        // Checks for the exponent button, then performs the operation
-        let base = first_operation[0];
-        let result = base ** 2;
-        final_operation.push(result);
-        input_box.value = result;
+    }  else if (char == 'exponent') {
+        if (current_number !== '') {
+            let number = Number(current_number);
+            let result = number ** 2;
+            input_box.value = result;
+            first_operation = [result];
+            last_result = result;
+            current_number = ''; 
+        } else if (first_operation.length > 0) {
+            let number = first_operation[0];
+            let result = number ** 2;
+            input_box.value = result;
+            first_operation = [result];
+            last_result = result; 
+        }
     } else if (char == 'sqrt') {
-        // Checks for the sqrt button, then performs the square root operation on the number
-        let number = first_operation[0];
-        let result = Math.sqrt(number);
-        final_operation.push(result);
-        input_box.value = result;
+        if (current_number !== '') {
+            let number = Number(current_number);
+            let result = Math.sqrt(number);
+            input_box.value = result;
+            first_operation = [result];  
+            last_result = result; 
+            current_number = '';  
+        } else if (first_operation.length > 0) {
+            let number = first_operation[0];
+            let result = Math.sqrt(number);
+            input_box.value = result;
+            first_operation = [result]; 
+            last_result = result; 
+        }
     } else if (char == 'CE') {
         first_operation = [];
     } else if (char == 'C') {
