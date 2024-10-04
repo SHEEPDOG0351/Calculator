@@ -1,11 +1,12 @@
 let first_operation = [] //Stores the first part of the operation
 let final_operation = [] //Stores the whole operation and should hold the current calculation
-let operation = ''
+let operation = '';
 let current_number = '';  
+let last_result = null;
 let input_box = document.querySelector('#output_box input');
 function output(char) {
     if ((typeof char === 'number' || typeof char === 'string') && char !== '=' && char !== 'CE' && char !== 'C' && char !== 'Delete') {
-        input_box.value += char
+        input_box.value += char;
     }
 }
 
@@ -17,7 +18,10 @@ function calculation(char) {
     else if (['+', '-', '/', '*'].includes(char)) {
         if (current_number !== '') {
             first_operation.push(Number(current_number));
-            current_number = '';}
+            current_number = '';
+        }else if(last_result !== null){
+            first_operation.push(last_result);
+        }
         // Checks for operators and makes sure its not one of the other equals / enter / delete etc buttons.
         operation = char
     } else if (char == 'exponent') {
@@ -34,10 +38,14 @@ function calculation(char) {
         input_box.value = result;
     } else if (char == 'CE'){
         first_operation = [];
+        current_number = ''
+        last_result = null
     } else if (char == 'C'){
         input_box.value = '';
         first_operation = [];
         final_operation = [];
+        current_number = ''
+        last_result = null
     } else if (char == 'Delete'){
         input_box.value = input_box.value.slice(0, -1);
         current_number = current_number.slice(0, -1);
@@ -69,6 +77,7 @@ function calculation(char) {
 
         final_operation.push(calc_result)
         input_box.value = calc_result;
-        first_operation = []
+        last_result = calc_result;
+        first_operation = [];
     }
 }}
